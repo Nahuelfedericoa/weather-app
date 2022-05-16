@@ -195,8 +195,33 @@ h1, h3 {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 360px) {
+    body {
+        margin: 0;
+    }
+
     .weather {
         min-height: 40em;
+    }
+
+    .weather__info {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .weather__temp,
+    .weather__city
+     {
+    font-size: 30px;
+    }
+
+    .weather__city--date,
+    .weather__city--time{
+        font-size: 18px;
+    }
+
+    .weather__logo {
+        margin: 0;
+        margin-bottom: 1rem;
     }
 }
