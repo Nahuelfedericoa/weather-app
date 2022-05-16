@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="weather">
+        <div class="weather__container">
+            <h3 class="weather__logo">Nahuel Federico</h3>
+
+            <div class="weather__info">
+                <h1 class="weather__temp">16&#176;</h1>
+                <div class="weather__city">
+                    <h1 class="weather__city--name">London</h1>
+                    <small>
+                        <span class="weather__city--time">06:09</span>
+                        -
+                        <span class="weather__city--date">Monday sep 19</span>
+                    </small>
+                </div>
+
+                <div class="weather__card">
+                    <img src="./icons/day/113.png" alt="icon" class="weather__card--icon">
+
+                    <span class="weather__card--condition">Cloudy</span>
+                </div>
+            </div>
+        </div>
+        <div class="weather__panel">
+            <form action="" class="weather__panel--form" id="location--input">
+                <input type="text" class="weather__panel--search" placeholder="Search Location...">
+
+                <button type="submit" class="weather__panel--button">
+                    <i class="uil uil-search"></i>
+                </button>
+            </form>
+
+            <ul class="weather__panel--cities">
+                <li class="weather__panel--city">New York</li>
+                <li class="weather__panel--city">California</li>
+                <li class="weather__panel--city">Paris</li>
+                <li class="weather__panel--city">Tokyo</li>
+            </ul>
+
+            <ul class="weather__panel--details">
+                <h4 class="weather__panel--title">Weather Details</h4>
+
+                <li class="weather__panel--detail">
+                    <span class="weather__panel--subtitle">Cloudy</span>
+                    <span class="cloud">89%</span>
+                </li>
+
+                <li class="weather__panel--detail">
+                    <span class="weather__panel--subtitle">Humidity</span>
+                    <span class="humidity">64%</span>
+                </li>
+
+                <li class="weather__panel--detail">
+                    <span class="weather__panel--subtitle">Wind</span>
+                    <span class="wind">8km/h</span>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
