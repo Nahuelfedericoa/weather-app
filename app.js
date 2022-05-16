@@ -48,7 +48,7 @@ function dayOfTheWeek(day, month, year) {
     "Friday",
     "Saturday",
   ];
-  return weekday[new Date(`${day}/${month}/${year}`).getDay()];
+  return weekday[new Date(`${year}-${month}-${day}`).getDay()];
 }
 
 function fetchWeatherData() {
@@ -63,16 +63,12 @@ function fetchWeatherData() {
 
       const date = data.location.localtime;
       console.log(date);
-      const year = parseInt(date.substr(0, 4));
-      const month = parseInt(date.substr(5, 2));
-      const day = parseInt(date.substr(8, 2));
+      const y = parseInt(date.substr(0, 4));
+      const m = parseInt(date.substr(5, 2));
+      const d = parseInt(date.substr(8, 2));
       const time = date.substr(11);
 
-      dateOutput.innerHTML = `${dayOfTheWeek(
-        day,
-        month,
-        year
-      )} ${day}, ${month} ${year}`;
+      dateOutput.innerHTML = `${dayOfTheWeek(d, m, y)} ${d}, ${m} ${y}`;
       timeOutput.innerHTML = time;
 
       nameOutput.innerHTML = data.location.name;
@@ -83,9 +79,9 @@ function fetchWeatherData() {
       console.log(iconId);
       icon.src = "./icons/" + iconId;
 
-      cloudOutput.innerHTML = data.current.clud + "%";
+      cloudOutput.innerHTML = data.current.cloud + "%";
       humidityOutput.innerHTML = data.current.humidity + "%";
-      windOutput.innerHTML = data.current.wind + "km/h";
+      windOutput.innerHTML = data.current.wind_kph + "km/h";
 
       let timeOfDay = "day";
       const code = data.current.condition.code; //Get unique id for each weather condition
